@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = 'https://sistema-pacientes-backend-mxoi.onrender.com/api';
 
 function getToken() {
   return localStorage.getItem('token') || '';
