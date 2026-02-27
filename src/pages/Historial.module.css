@@ -1,0 +1,71 @@
+.root { animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.tableCard {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--slate-100);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.muted { color: var(--slate-300); font-size: 13px; }
+
+.diagnostico {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  color: var(--slate-500);
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Detail */
+.detailHeader {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--teal-50), white);
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+}
+.detailName {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--slate-900);
+  margin-bottom: 6px;
+}
+.detailBadges { display: flex; gap: 6px; flex-wrap: wrap; }
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.detailItem { display: flex; flex-direction: column; gap: 3px; }
+.detailLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--slate-300);
+}
+.detailVal { font-size: 14px; color: var(--slate-900); line-height: 1.5; }

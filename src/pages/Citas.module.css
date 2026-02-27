@@ -1,0 +1,105 @@
+.root { animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: white;
+  border: 1px solid var(--slate-100);
+  border-radius: var(--radius-sm);
+  padding: 5px;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+
+.tab {
+  padding: 7px 18px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--slate-300);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: var(--transition);
+}
+.tab:hover { color: var(--slate-700); }
+.activeTab {
+  background: linear-gradient(135deg, var(--teal-700), var(--teal-600));
+  color: white;
+  box-shadow: 0 2px 8px rgba(10,124,110,0.25);
+}
+
+.citaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.citaCard {
+  background: white;
+  border: 1px solid var(--slate-100);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+.citaCard:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.past { opacity: 0.65; }
+
+.citaDateBox {
+  min-width: 52px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--teal-700), var(--teal-600));
+  border-radius: var(--radius-sm);
+  padding: 10px 6px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.citaDay   { font-size: 26px; font-weight: 700; line-height: 1; }
+.citaMon   { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-top: 2px; }
+.citaYear  { font-size: 10px; opacity: 0.6; margin-top: 1px; }
+
+.citaBody { flex: 1; }
+.citaPatientRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.citaPatient {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--slate-900);
+}
+.citaMotivo {
+  font-size: 13px;
+  color: var(--slate-500);
+  margin-bottom: 6px;
+}
+.citaTime  { font-size: 12px; color: var(--slate-300); }
+.citaObs   { font-size: 12px; color: var(--slate-300); margin-top: 4px; font-style: italic; }
+
+.citaDeleteBtn {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--slate-300);
+  font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+.citaDeleteBtn:hover { background: var(--rose-100); color: var(--rose-600); }
